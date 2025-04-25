@@ -1,0 +1,302 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Mooli&family=Poppins:wght@200;300&family=Roboto+Slab:wght@300&family=Satisfy&family=Ubuntu:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100%;
+    font-family: 'Poppins', sans-serif;
+    background: #333;
+   /* font-family: 'Mooli', sans-serif;
+    font-family: 'Roboto Slab', serif;
+    font-family: 'Satisfy', cursive;
+    font-family: 'Ubuntu', sans-serif;*/
+}
+nav{
+    display: flex;
+    top:0;
+    left: 0;
+    height: 70px;
+    width: 100%;
+    background: #0c0c0c;
+    box-shadow: 0 0 1px rgba(0,0,0.1);
+    align-items: center;
+    
+    
+}
+nav .logo{
+    display: flex;
+    align-items: center;
+    margin: 0 24px;
+}
+.logo .menu-icon {
+    color: #fdfbfb;
+    font-size:26px ;
+    cursor: pointer;
+}
+.logo .logo-name{
+    color: #fbf9f9;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin: 0 24px;
+}
+#logomain{
+    margin-top: 19px;
+}
+.sidelogo{
+    position: absolute;
+    right: 23px;
+
+
+}
+nav .sidebar{
+    position: fixed;
+    left:-100%;
+    top: 0;
+    padding: 20px 0;
+    z-index: 1;
+    height: 100%;
+    width: 250px;
+    background: rgba(11, 11, 11, 0.961);
+    box-shadow: 0 5px 10px rgba(0,0,0.1);
+    transition :all 0.5s ease;
+}
+nav.open .sidebar{
+    left:0;
+    width: 250px;
+}
+.sidebar .sidebar-content{
+    padding: 30px 16px;
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    flex-direction: column;
+    color: #fff;
+}
+.sidebar-content .list{
+    list-style: none;
+    color: #fbf9f9;
+}
+.list .nav-link{
+    display: flex;
+    align-items: center;
+    padding: 14px 12px;
+    border-radius: 8px;
+    text-decoration: none;
+}
+.nav-link:hover{
+    background-color:rgb(250, 250, 250);
+
+}
+.nav-link .icon{
+    margin-right: 14px;
+    font-size: 20px;
+    color: rgb(248, 250, 250);
+
+}
+.nav-link .link{
+    font-size: 16px;
+    color: rgb(249, 246, 246);
+    font-weight: 400;
+}
+.nav-link:hover .icon,
+.nav-link:hover .link{
+    color:rgb(199, 196, 193);
+}
+.overlay{
+    display: flex;
+}
+.songlist{
+    width:260px;
+    min-height:74vh;
+    background-color:  rgba(11, 11, 11, 0.961);
+    overflow: auto;
+    
+}
+span.songlist h1{
+    margin: 0 26px;
+    color: #3a3a3a;
+}
+
+.songItem{
+    width:236px;
+    background-color: #3a3a3a;
+    color: #fff;
+    max-height:240px;
+    margin: 8px auto;
+    border-radius: 8px;
+    overflow: auto;
+}
+.overlay .songItem::-webkit-scrollbar{
+    display: none;
+}
+.songItem li{
+    list-style-type: none;
+    position: relative;
+    padding: 5px 5px 5px 10px;
+    display: flex;
+    align-items: center;
+    margin-bottom:3px ;
+    cursor: pointer;
+    transition: .3s linear;
+}
+.songItem li h5{
+    margin-left: 6px;
+    width: 160px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+
+}
+.songItem li:hover{
+    background: rgb(41, 41, 41, 2);
+}
+.songItem li img{
+    width: 32px;
+    height: 32px;
+    margin-left: 22px;
+    margin-right: 5px;
+}
+.songItem b{
+    margin: 3px 4px ;
+}
+.songItem p{
+    margin: 13px 4px;
+}
+#signin{
+    width: 150PX;
+    height: 40px;
+    border-radius: 18px;
+    margin: 12px 8px;
+    font-size:bolder;
+}
+.library{
+    width:236px;
+    background-color: #3a3a3a;
+    color: #fff;
+    margin: 8px auto;
+    border-radius: 8px;
+}
+.library b{
+    margin: 3px 4px;
+}
+.library p{
+    margin: 13px 4px;
+}
+#crplaylist{
+    width: 150PX;
+    height: 40px;
+    border-radius: 18px;
+    margin: 12px 8px;
+    font-size:bolder;
+}
+.listsongs{
+    margin: 23px 28px;
+    flex-direction: row;
+    display: flex;
+
+
+}
+.songscontainer{
+    background:  rgba(11, 11, 11, 0.961);
+    width: 80%;
+    margin-left: 15px;
+    max-height: 470px;
+    overflow: auto;
+    top: 17px;
+    position: relative;
+    border-radius: 15px;
+    
+}
+.songscontainer,
+.songItem {
+    /* Apply the same styles to hide scrollbar in both elements */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+}
+
+.songscontainer::-webkit-scrollbar,
+.songItem::-webkit-scrollbar {
+    /* Hide the scrollbar for WebKit browsers (Chrome, Safari, etc.) */
+    display: none;
+}
+.songscontainer::-webkit-scrollbar{
+    display:none;
+
+}
+.songscontainer h1{
+    margin: 12px 23px;
+    color:#fff
+}
+.img{
+    height: 178px;
+    border-radius:18px;
+    padding:10px;
+}
+.title{
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    padding: 0 3px;
+    margin: 0 5px;
+}
+.solists1{
+    background-color: #3a3a3a;
+    height: 264px;
+    width: 190px;
+    border-radius: 8px;
+    margin: 12px;
+    padding: 4px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+nav .open ~ .overlay{
+ opacity: 1;
+ left: 260px;
+ pointer-events: auto;    
+}
+.progressbar{
+    background: #050505;
+    color:#fff;
+    height: 70px;
+    bottom: 0;
+    left:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;
+    width: 100%;
+}
+nav .progressbar .open{
+    width: calc(100%-250px);
+}
+#myprogressBar{
+    color: #0c0c0c;
+    width: 61%;
+    margin:5px auto;
+}
+.progressicon{
+    margin:0 auto;
+
+}
+.songinfo{
+    left: 0;
+    position: absolute;
+    margin: 12vw;
+}
+.songinfo img{
+    opacity: 0;
+    transition: opacity 1s ease-in ease-in-out;
+
+}
+.bx{
+    color: #fff;
+}
+
